@@ -37,6 +37,8 @@ $cabeceras = 'From: stwherrerasystem@gmail.com' . "\r\n" .
              require 'PHPMailer/src/Exception.php';
              require 'PHPMailer/src/PHPMailer.php';
              require 'PHPMailer/src/SMTP.php';
+
+             $email = $_POST['email'];
              
              //Create an instance; passing `true` enables exceptions
              $mail = new PHPMailer(true);
@@ -54,7 +56,7 @@ $cabeceras = 'From: stwherrerasystem@gmail.com' . "\r\n" .
              
                  //Recipients
                  $mail->setFrom('lert.07.04.95@gmail.com', 'D4T4T1CS');
-                 $mail->addAddress('jsmurillo76@misena.edu.co', 'D4T4T1CS');     //Add a recipient
+                 $mail->addAddress($email, 'D4T4T1CS');     //Add a recipient
              
                  //Content
                  $mail->isHTML(true);         
