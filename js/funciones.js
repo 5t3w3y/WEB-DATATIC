@@ -1,5 +1,7 @@
 const formulariop = document.querySelector('#form');
 
+
+
 //definicion del evento Submit
 formulariop.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -19,7 +21,7 @@ formulariop.addEventListener('submit', (e) => {
         formulariop.reset();
     } else {
         const datos = new FormData(formulariop);
-        var url = './js/llamarfuncion.php';
+        var url = './modelo/llamarfuncion.php';
 
         fetch(url, {
                 method: 'POST',
